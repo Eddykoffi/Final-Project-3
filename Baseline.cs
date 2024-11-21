@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace BaselineEvaluation
 {
-    // Interfaces (unchanged)
+  
     public interface IEvaluator
     {
         double EvaluatePredictions(IEnumerable<(IDictionary<string, double>, string)> labeledExamples, IEnumerable<string> predictions);
@@ -22,7 +22,7 @@ namespace BaselineEvaluation
         IEnumerable<string> MakeNFoldCrossPredictions(ITreeBuilder builder, IEnumerable<(IDictionary<string, double>, string)> labeledExamples);
     }
 
-    // Models (unchanged)
+
     public interface IDecisionTree
     {
         string Label(IDictionary<string, double> features);
@@ -120,7 +120,7 @@ namespace BaselineEvaluation
         }
     }
 
-    // Implementations (unchanged)
+    // Implementations 
     public class AccuracyEvaluator : IEvaluator
     {
         public double EvaluatePredictions(IEnumerable<(IDictionary<string, double>, string)> labeledExamples, IEnumerable<string> predictions)
